@@ -1,15 +1,15 @@
 <template>
     <div class="addition">
         <a
-            href="https://social-plugins.line.me/lineit/share?url=https://www.ftvnews.com.tw/topics/thankq/"
+            href="https://social-plugins.line.me/lineit/share?url=https://www.ftvnews.com.tw/topics/freddy/"
             target="_blank"
         >
-            <span id="social_line" data-href="https://www.ftvnews.com.tw/topics/thankq/"></span>
+            <span id="social_line" data-href="https://www.ftvnews.com.tw/topics/freddy/"></span>
         </a>
 
         <a
             target="_blank"
-            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Fthankq%2F&amp;src=sdkpreparse"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Ffreddy%2F&amp;src=sdkpreparse"
             class="fb-xfbml-parse-ignore"
             ><span id="social_facebook"></span
         ></a>
