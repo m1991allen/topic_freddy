@@ -1,13 +1,13 @@
 <template>
     <Header />
     <Banner />
-    <CharacterVoting />
     <CharacterProfile />
     <CharacterVoted />
     <ContentReason />
     <ContentProcess />
     <ContentRecall />
     <ContentFactions />
+    <CharacterVoting />
     <ContentNews />
     <Footer />
     <AdditionSocial />
@@ -36,8 +36,8 @@ export default {
     components: {
         Header,
         Banner,
-        CharacterVoting,
         CharacterVoted,
+        CharacterVoting,
         CharacterProfile,
         ContentReason,
         ContentProcess,
@@ -223,14 +223,14 @@ ul li {
     text-align: left;
     margin: 1rem 0 1rem 0;
     font-size: 1.2rem;
-    line-height: 1.4rem;
+    line-height: 2rem;
 }
 
 p {
     text-align: left;
     margin: 0.5rem 0 2rem 0;
-    line-height: 1.4rem;
     font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 @media screen and (max-width: 768px) {

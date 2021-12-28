@@ -27,7 +27,7 @@
 export default {
     data() {
         return {
-            title: '相關新聞',
+            title: '最新新聞',
             newsInfo: [],
         }
     },

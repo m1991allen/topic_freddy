@@ -2,7 +2,7 @@
     <div class="bottom">
         <a href="#reason"><i class="fas fa-user"></i> 罷免理由</a>
         <a href="#recall"><i class="fad fa-chart-pie"></i> 罷免門檻</a>
-        <a href="#news"><i class="fad fa-rss"></i> 相關新聞</a>
+        <a href="#news"><i class="fad fa-rss"></i> 最新新聞</a>
         <!-- <i class="fad fa-vote-nay"></i> -->
     </div>
 </template>

@@ -33,10 +33,6 @@ export default {
                     anchor: '#reason',
                 },
                 {
-                    title: '各方說法',
-                    anchor: '#factions',
-                },
-                {
                     title: '罷免程序',
                     anchor: '#porcess',
                 },
@@ -45,7 +41,11 @@ export default {
                     anchor: '#recall',
                 },
                 {
-                    title: '相關新聞',
+                    title: '各方說法',
+                    anchor: '#factions',
+                },
+                {
+                    title: '最新新聞',
                     anchor: '#news',
                 },
             ],

@@ -3,8 +3,8 @@
         <h1>{{ title }}</h1>
         <a href="#voting">
             <picture>
-                <source srcset="../assets/banner_mobile.jpg" media="(max-width: 768px)" />
-                <img src="../assets/banner_desktop.jpg" alt="林昶佐罷免案" />
+                <source srcset="../assets/banner_mobile.png" media="(max-width: 768px)" />
+                <img src="../assets/banner_desktop.png" alt="林昶佐罷免案" />
             </picture>
         </a>
     </div>
