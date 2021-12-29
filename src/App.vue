@@ -13,6 +13,7 @@
     <AdditionSocial />
     <AdditionScrolltop />
     <AdditionBottom />
+    <!-- music btn -->
 </template>
 
 <script>
@@ -53,6 +54,9 @@ export default {
 </script>
 
 <style>
+#music {
+    display: none;
+}
 /* reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126

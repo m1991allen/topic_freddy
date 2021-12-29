@@ -11,14 +11,13 @@
                         <h2 class="title">{{ item.Title }}</h2>
                     </div>
                     <div>
-                        <p>{{ item.CreateDate }}</p>
+                        <p class="date">{{ item.CreateDate }}</p>
                     </div>
                 </a>
             </div>
-
-            <div class="btn_more">
-                <a href="https://www.ftvnews.com.tw/tag/林昶佐/" target="blank">更多 「 林昶佐罷免案 」 新聞</a>
-            </div>
+        </div>
+        <div class="btn_more">
+            <a href="https://www.ftvnews.com.tw/tag/林昶佐/" target="blank">更多 「 林昶佐罷免案 」 新聞</a>
         </div>
     </div>
 </template>
@@ -56,14 +55,32 @@ export default {
 </script>
 
 <style scoped>
+.section-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+    .section-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1rem;
+    }
+}
+
 .news {
-    display: inline-block;
-    max-width: 300px;
-    border: 1px solid #eee;
-    height: 300px;
-    background-color: #ededed;
+    background-color: #9b9b9b;
     transition: 0.3s;
-    margin: 0 1rem 1rem 0;
+    margin-bottom: 1rem;
+    color: white;
 }
 
 @media screen and (max-width: 500px) {
@@ -73,19 +90,24 @@ export default {
 }
 
 .news:hover {
-    background-color: #ece6e4;
+    background-color: #e18a59;
 }
 
 .news p {
     text-align: left;
-    margin: 20px 0 0 0;
-    padding: 0.3rem;
+    font-size: 0.9rem;
     font-weight: lighter;
+    padding: 1rem;
+    margin: 0;
+    color: white;
 }
 
 .news img {
     width: 100%;
-    height: 180px;
+}
+
+.news a div:nth-child(1) {
+    overflow: hidden;
 }
 
 .title {
@@ -96,11 +118,12 @@ export default {
     -webkit-box-orient: vertical;
     /* 解決firefox不支援-webkit-line-clamp的問題 */
     line-height: 30px;
-    max-height: 60px;
+    max-height: 70px;
     text-align: left;
     font-size: 1.2rem;
     font-weight: normal;
-    padding: 0.3rem;
+    padding: 1rem;
+    color: white;
 }
 @media screen and (max-width: 768px) {
     .title {
