@@ -6,7 +6,6 @@
                 <figure>
                     <img src="../assets/profile.png" alt="林昶佐" />
                     <figcaption class="name">{{ name }}</figcaption>
-                    <span>（圖：時代力量提供）</span>
                 </figure>
                 <article>
                     <p style="margin-left: 1rem; margin-bottom:0; font-weight:bolder;">學歷：</p>

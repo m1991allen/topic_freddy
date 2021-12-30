@@ -13,8 +13,7 @@
                     allowfullscreen
                 ></iframe>
             </div>
-            <div class="vote">
-                <!-- 同意票/不同意票 -->
+            <!-- <div class="vote">
                 <div class="votebox"><span id="agree_bar"></span></div>
                 <p>
                     {{ title_agree }}<span id="agree_vote">{{ vote_agree }}</span>
@@ -27,12 +26,11 @@
                     {{ title_disagree }}<span id="disagree_vote">{{ vote_disagree }}</span>
                 </p>
 
-                <!-- 開票結果 -->
                 <h3 style="text-align:center; margin-top:5rem;">
                     開票結果
                 </h3>
                 <img src="../assets/result.jpg" alt="開票結果" style="width:100%" />
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
