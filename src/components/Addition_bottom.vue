@@ -1,9 +1,11 @@
 <template>
     <div class="bottom">
-        <a href="#reason"><i class="fas fa-user"></i> 罷免理由</a>
-        <a href="#recall"><i class="fad fa-chart-pie"></i> 罷免門檻</a>
-        <a href="#news"><i class="fad fa-rss"></i> 最新新聞</a>
-        <!-- <i class="fad fa-vote-nay"></i> -->
+        <a href="https://lihi1.cc/lwxZF"><i class="fas fa-user"></i> 罷免理由</a>
+        <!-- <a href="https://lihi1.cc/x4AHh"><i class="fad fa-vote-nay"></i> 即時開票</a> -->
+        <a href="https://lihi1.cc/JlE12"><i class="fad fa-chart-pie"></i> 罷免門檻</a>
+        <a href="https://lihi1.cc/bebPW"><i class="fad fa-rss"></i> 最新新聞</a>
+
+        <!--  -->
     </div>
 </template>
 
