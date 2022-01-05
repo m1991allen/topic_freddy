@@ -19,12 +19,21 @@ export default {}
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #4d4d4d;
     z-index: 999;
 }
 .bottom a {
     width: 33.3%;
     padding: 1rem;
     color: white;
+}
+
+.bottom a:nth-child(1) {
+    background-color: #4d4d4d;
+}
+.bottom a:nth-child(2) {
+    background-color: #606060;
+}
+.bottom a:nth-child(3) {
+    background-color: #747474;
 }
 </style>

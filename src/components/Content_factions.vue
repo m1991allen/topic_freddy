@@ -85,10 +85,6 @@ h4 {
     border-radius: 0 10px 0px 0;
 }
 
-.flex {
-    align-items: flex-end;
-}
-
 figure {
     text-align: left;
     margin-top: 2rem;
@@ -98,7 +94,8 @@ figure img {
     text-align: left;
 }
 figure figcaption {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
     margin: 0 0 1rem 1rem;
 }
 
@@ -141,7 +138,7 @@ figure figcaption {
 
 #factions .flex {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     max-width: 100%;
 }
 

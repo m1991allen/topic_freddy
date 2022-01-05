@@ -77,7 +77,7 @@ export default {
 }
 
 .news {
-    background-color: #9b9b9b;
+    background-color: #a1a1a1;
     transition: 0.3s;
     margin-bottom: 1rem;
     color: white;
@@ -108,6 +108,11 @@ export default {
 
 .news a div:nth-child(1) {
     overflow: hidden;
+}
+
+.news a div:nth-child(1) {
+    overflow-y: hidden;
+    max-height: 150px;
 }
 
 .title {
