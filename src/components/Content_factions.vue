@@ -75,6 +75,20 @@ export default {
 </script>
 
 <style scoped>
+.iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+}
+.iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 h4 {
     text-align: right;
     font-size: 1.2rem;

@@ -6,6 +6,7 @@
     <ContentReason />
     <ContentProcess />
     <ContentRecall />
+    <ContentLive />
     <ContentFactions />
     <CharacterVoting />
     <ContentNews />
@@ -25,7 +26,9 @@ import CharacterVoted from '@/components/Character_voted.vue'
 import ContentReason from '@/components/Content_reason.vue'
 import ContentProcess from '@/components/Content_process.vue'
 import ContentRecall from '@/components/Content_recall.vue'
+import ContentLive from '@/components/Content_live.vue'
 import ContentFactions from '@/components/Content_factions.vue'
+
 import ContentNews from '@/components/Content_news.vue'
 import Footer from '@/components/Footer.vue'
 import AdditionSocial from '@/components/Addition_social.vue'
@@ -43,6 +46,7 @@ export default {
         ContentReason,
         ContentProcess,
         ContentRecall,
+        ContentLive,
         ContentFactions,
         ContentNews,
         Footer,

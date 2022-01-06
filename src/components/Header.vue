@@ -45,6 +45,10 @@ export default {
                     anchor: '#factions',
                 },
                 {
+                    title: '電視罷免說明會',
+                    anchor: '#live',
+                },
+                {
                     title: '最新新聞',
                     anchor: '#news',
                 },
