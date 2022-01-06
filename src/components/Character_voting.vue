@@ -40,9 +40,9 @@ export default {
     data() {
         return {
             title: '直播專區',
-            title_agree: '同意（門檻：6萬1187票）: ',
+            title_agree: '同意（門檻：5萬8756票）: ',
             title_disagree: '不同意： ',
-            vote_total: 200000,
+            vote_total: 235024,
             vote_agree: 0,
             vote_disagree: 0,
         }
@@ -52,11 +52,14 @@ export default {
         vote(vote_total) {
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews.com.tw/topics/freddy/poll220109_freddy.json')
+                .get('https://www.ftvnews.com.tw/api/poll220109.json')
                 .then(function(res) {
-                    let vote_agree = res.data.Data[0].AgreeTickets
-                    let vote_disagree = res.data.Data[0].RejectTickets
+                    // 同意票
+                    let vote_agree = res.data.Data[0].Candidate[0].Tickets
                     let bar_agree = Math.floor((vote_agree / vote_total) * 100)
+
+                    // 不同意票
+                    let vote_disagree = res.data.Data[0].Candidate[1].Tickets
                     let bar_disagree = Math.floor((vote_disagree / vote_total) * 100)
 
                     document.getElementById('agree_vote').innerText =
@@ -64,8 +67,17 @@ export default {
                     document.getElementById('disagree_vote').innerText =
                         vote_disagree.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
 
-                    document.getElementById('agree_bar').style.width = bar_agree + '%'
-                    document.getElementById('disagree_bar').style.width = bar_disagree + '%'
+                    if (bar_agree > 100) {
+                        document.getElementById('agree_bar').style.width = 100 + '%'
+                    } else {
+                        document.getElementById('agree_bar').style.width = bar_agree + '%'
+                    }
+
+                    if (bar_disagree > 100) {
+                        document.getElementById('disagree_bar').style.width = 100 + '%'
+                    } else {
+                        document.getElementById('disagree_bar').style.width = bar_disagree + '%'
+                    }
                 })
                 .catch(function(err) {
                     // Error happened
