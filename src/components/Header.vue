@@ -17,7 +17,7 @@ export default {
         return {
             list: [
                 {
-                    title: '直播專區',
+                    title: '即時開票',
                     anchor: '#voting',
                 },
                 {

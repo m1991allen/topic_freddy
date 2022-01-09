@@ -1,6 +1,7 @@
 <template>
     <Header />
     <Banner />
+    <CharacterVoting />
     <CharacterProfile />
     <CharacterVoted />
     <ContentReason />
@@ -8,7 +9,6 @@
     <ContentRecall />
     <ContentLive />
     <ContentFactions />
-    <CharacterVoting />
     <ContentNews />
     <Footer />
     <AdditionSocial />

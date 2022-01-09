@@ -13,8 +13,9 @@
                     allowfullscreen
                 ></iframe>
             </div>
-            <!-- <div class="vote">
-                <div class="votebox"><span id="agree_bar"></span></div>
+            <div class="vote">
+                <div class="votebox"><span id="agree_bar"></span><span class="pass">未過關</span></div>
+
                 <p>
                     {{ title_agree }}<span id="agree_vote">{{ vote_agree }}</span>
                 </p>
@@ -30,7 +31,7 @@
                     開票結果
                 </h3>
                 <img src="../assets/result.jpg" alt="開票結果" style="width:100%" />
-            </div> -->
+            </div>
         </div>
     </div>
 </template>
@@ -42,30 +43,25 @@ export default {
             title: '直播專區',
             title_agree: '同意（門檻：5萬8756票）: ',
             title_disagree: '不同意： ',
-            vote_total: 235024,
+            vote_total: 70000,
             vote_agree: 0,
             vote_disagree: 0,
         }
     },
 
     methods: {
-        vote(vote_total) {
+        vote() {
             // eslint-disable-next-line no-undef
             axios
                 .get('https://www.ftvnews.com.tw/api/poll220109.json')
                 .then(function(res) {
                     // 同意票
                     let vote_agree = res.data.Data[0].Candidate[0].Tickets
-                    let bar_agree = Math.floor((vote_agree / vote_total) * 100)
+                    let bar_agree = Math.floor((vote_agree / 70000) * 100)
 
                     // 不同意票
                     let vote_disagree = res.data.Data[0].Candidate[1].Tickets
-                    let bar_disagree = Math.floor((vote_disagree / vote_total) * 100)
-
-                    document.getElementById('agree_vote').innerText =
-                        vote_agree.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
-                    document.getElementById('disagree_vote').innerText =
-                        vote_disagree.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
+                    let bar_disagree = Math.floor((vote_disagree / 70000) * 100)
 
                     if (bar_agree > 100) {
                         document.getElementById('agree_bar').style.width = 100 + '%'
@@ -78,6 +74,11 @@ export default {
                     } else {
                         document.getElementById('disagree_bar').style.width = bar_disagree + '%'
                     }
+
+                    document.getElementById('agree_vote').innerText =
+                        vote_agree.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
+                    document.getElementById('disagree_vote').innerText =
+                        vote_disagree.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
                 })
                 .catch(function(err) {
                     // Error happened
@@ -88,13 +89,13 @@ export default {
         keepVoting() {
             setInterval(() => {
                 this.vote()
-            }, 15000)
+            }, 3000)
         },
     },
 
     mounted() {
         this.vote(this.vote_total)
-        this.keepVoting()
+        // this.keepVoting(this.vote_total)
     },
 }
 </script>
@@ -144,5 +145,20 @@ export default {
 #disagree_bar {
     width: 0%;
     background-color: #e77434;
+}
+
+.pass {
+    font-size: 1.6rem;
+    transform: translateY(-28px);
+    color: red;
+    transform: rotate(345deg) translateY(-2px);
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 400px) {
+    .pass {
+        font-size: 1rem;
+        transform: rotate(345deg) translateY(5px);
+    }
 }
 </style>
