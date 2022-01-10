@@ -14,7 +14,7 @@
                 ></iframe>
             </div>
             <div class="vote">
-                <div class="votebox"><span id="agree_bar"></span><span class="pass">未過關</span></div>
+                <div class="votebox"><span id="agree_bar"></span><span class="pass">未通過</span></div>
 
                 <p>
                     {{ title_agree }}<span id="agree_vote">{{ vote_agree }}</span>
@@ -150,7 +150,7 @@ export default {
 .pass {
     font-size: 1.6rem;
     transform: translateY(-28px);
-    color: red;
+    color: #7b1f06;
     transform: rotate(345deg) translateY(-2px);
     font-weight: bolder;
 }
