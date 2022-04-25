@@ -27,9 +27,7 @@
                     {{ title_disagree }}<span id="disagree_vote">{{ vote_disagree }}</span>
                 </p>
 
-                <h3 style="text-align:center; margin-top:5rem;">
-                    開票結果
-                </h3>
+                <h3 style="text-align:center; margin-top:5rem;">開票結果</h3>
                 <img src="../assets/result.jpg" alt="開票結果" style="width:100%" />
             </div>
         </div>
